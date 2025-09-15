@@ -1,10 +1,3 @@
-document.querySelector(".arrow_left").addEventListener("click", () => {
-  console.log("Vous avez cliqué sur la flèche de gauche");
-});
-document.querySelector(".arrow_right").addEventListener("click", () => {
-  console.log("Vous avez cliqué sur la flèche de droite");
-});
-
 const slides = [
   {
     image: "slide1.jpg",
@@ -24,3 +17,17 @@ const slides = [
     tagLine: "Autocollants <span>avec découpe laser sur mesure</span>",
   },
 ];
+
+//Gestion des flèches
+document.querySelector(".arrow_left").addEventListener("click", () => {
+  console.log("Vous avez cliqué sur la flèche de gauche");
+});
+document.querySelector(".arrow_right").addEventListener("click", () => {
+  console.log("Vous avez cliqué sur la flèche de droite");
+});
+
+// On parcourt le tableau slides pour compter et afficher les bullets points
+for (let i = 0; i < slides.length; i++) {
+  console.log(slides[i]);
+  document.querySelector(".dots").innerHTML += `<div class="dot"></div>`;
+}
